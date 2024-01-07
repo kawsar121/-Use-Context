@@ -4,9 +4,10 @@ import { NavLink } from 'react-router-dom';
 const Register = () => {
     const handleRegister = e =>{
         e.preventDefault()
+        const name = e.target.name.value;
         const email = e.target.email.value;
         const password = e.target.password.value;
-        console.log(email, password)
+        console.log(name, email, password)
     }
 
     return (
@@ -14,6 +15,15 @@ const Register = () => {
             <form onSubmit={handleRegister} className="max-w-sm mx-auto">
                 <div className='text-center my-16 text-4xl text-red-500'>
                     <h1>Register Your Page</h1>
+                </div>
+                <div className="mb-5">
+                    <input
+                        type="text"
+                        id="text"
+                        name='name'
+                        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        placeholder="Name"
+                        required />
                 </div>
                 <div className="mb-5">
                     <input

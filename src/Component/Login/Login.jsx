@@ -2,9 +2,17 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 const Login = () => {
+
+    const handleLogin = e =>{
+        e.preventDefault()
+        const email = e.target.email.value;
+        const password = e.target.password.value;
+        console.log(email, password)
+    }
+
     return (
         <div>
-            <form className="max-w-sm mx-auto">
+            <form onSubmit={handleLogin} className="max-w-sm mx-auto">
                 <div className='text-center my-16 text-4xl text-red-500'>
                     <h1>Login Your Page</h1>
                 </div>
