@@ -8,8 +8,8 @@ const Login = () => {
         const email = e.target.email.value;
         const password = e.target.password.value;
         console.log(email, password)
-    }
-
+    } 
+    
     return (
         <div>
             <form onSubmit={handleLogin} className="max-w-sm mx-auto">
